@@ -1,9 +1,9 @@
-import uvicorn # type: ignore
+import uvicorn 
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse,JSONResponse
 
-app = FastAPI()  # Ensure this line is present
+app = FastAPI()  
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
@@ -12,4 +12,4 @@ def serve_ui():
     return FileResponse("static/index.html")
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8001)
