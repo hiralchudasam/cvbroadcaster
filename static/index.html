@@ -1,9 +1,64 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title> HIRAL CHUDASAMA </title>
+        <title> Video Broadcaster </title>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #333;
+                background: url('./static/bg_image.jpg') no-repeat center center fixed;
+                background-size: cover;
+            }
+            .container {
+                width: 70%;
+                max-width: 750px;
+                background: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                position: relative;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+                border: 2px solid #e0e0e0;
+                background: linear-gradient(145deg, #f5f7fa 0%, #c2e2ef 100%);
+            }
+
+        </style>
     </head>
     <body>
-        <h1> HELLO! I am creating a custom video broadcaster.</h1>
+        <img scr=",/static/image.jpg">
+        
+        <div class="container">
+            <div class="button">
+                <button onclick="">List Devices</button>
+                <button onclick="">Start Stream</button>
+                <button onclick="">Stop Stream</button>
+            </div>
+           
+
+            <div class="inputs">
+                <label for="camera">Choose Camera</label>
+                <select id="camera"></select>
+
+                <label>FPS</label>
+                <input type="number" id="fps" value="15" min="1" max="60">
+
+                <label for="blur">Blur Strength (odd number)</label>
+                <input type="range" id="blur" value="10" min="1" max="52">
+
+                <label for="background">Background</label>
+                <select id="background">
+                    <option value="none">No Background</option>
+                    <option value="blur">Blur</option>
+                    <option value="default">Default</option>
+                </select>
+            </div>>
+        </div>
     </body>
 </html>
